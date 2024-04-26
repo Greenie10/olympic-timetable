@@ -13,6 +13,20 @@ Clone the repository and navigate to the project directory.
 ---
 ## 📈 Progress
 
+### Todo
+
+- [x] Initial setup of repo
+- [x] Import and map the data for one sport
+- [ ] Navigation between sports
+- [ ] Break index into components
+- [ ] Import and map the data for all sports
+- [ ] Get the data for all sports
+- [ ] Filter by sport, event level (eg, only finals), date, day, time, etc
+- [ ] Styling - maybe dark/light modes, ensure mobile responsiveness
+- [ ] Enable user time zone selection
+
+### Sports
+
 - [ ] Archery 🚧
 - [ ] Artistic Gymnastics 
 - [ ] Artistic Swimming 
