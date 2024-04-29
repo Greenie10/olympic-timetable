@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import styled from "styled-components";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
 import allSports from "../data/all-sports.json";
+
+dayjs.extend(utc);
 
 const sportData = allSports;
 
@@ -81,7 +84,7 @@ const EventList: React.FC<EventListProps> = ({ selectedSportKey }) => {
                 return (
                   <Events key={unit.unitCode}>
                     <Time>
-                      {dayjs(unit.startDateTimeUtc).format("HH:mm")}
+                      {dayjs.utc(unit.startDateTimeUtc).format("HH:mm")}
                       &nbsp;UTC
                     </Time>
                     <Event>{unit.description}</Event>
