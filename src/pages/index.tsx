@@ -1,48 +1,98 @@
-import * as React from "react";
+import React, { useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import styled from "styled-components";
-import archery from "../data/archery.json";
 import dayjs from "dayjs";
+import allSports from "../data/all-sports.json";
+
+const sportData = allSports;
 
 const IndexPage: React.FC<PageProps> = () => {
-  console.log(archery.schedules[0].units[0].description);
+  const [selectedSportKey, setSelectedSportKey] = useState(32);
   return (
     <PageContainer>
       <h1>Olympic timetable</h1>
-      <h2>Archery</h2>
-      <EventsWrapper>
-        {archery.schedules.map((data, key) => {
+      <SportNav
+        selectedSportKey={selectedSportKey}
+        setSelectedSportKey={setSelectedSportKey}
+      />
+      <h2>{sportData.sports[selectedSportKey].sport}</h2>
+      <EventList selectedSportKey={selectedSportKey} />
+    </PageContainer>
+  );
+};
+
+type SportNavProps = {
+  selectedSportKey: number;
+  setSelectedSportKey: (key: number) => void;
+};
+
+const SportNav: React.FC<SportNavProps> = ({
+  selectedSportKey,
+  setSelectedSportKey,
+}) => {
+  return (
+    <nav>
+      <h2>List of sports</h2>
+      <ul>
+        {sportData.sports.map((data, key) => {
           return (
-            <EventDay>
-              <DateContainer>
-                <DayOfWeek>
-                  {dayjs(data.units[0].startDateTimeUtc).format("dddd")}
-                </DayOfWeek>
-                <DateDigit>
-                  {dayjs(data.units[0].startDateTimeUtc).format("D")}
-                </DateDigit>
-                <Month>
-                  {dayjs(data.units[0].startDateTimeUtc).format("MMMM")}
-                </Month>
-              </DateContainer>
-              <EventContainer display="flex" border="1px solid hotpink">
-                {data.units.map((unit, key2) => {
-                  return (
-                    <Events key={unit.unitCode}>
-                      <Time>
-                        {dayjs(data.units[0].startDateTimeUtc).format("HH:MM")}
-                        &nbsp;UTC
-                      </Time>
-                      <Event>{unit.description}</Event>
-                    </Events>
-                  );
-                })}
-              </EventContainer>
-            </EventDay>
+            <li key={key}>
+              <a
+                href={`sport=${key}`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setSelectedSportKey(key);
+                }}
+              >
+                {data.sport}
+              </a>{" "}
+              {selectedSportKey === key && "(selected)"}
+            </li>
           );
         })}
-      </EventsWrapper>
-    </PageContainer>
+      </ul>
+    </nav>
+  );
+};
+
+type EventListProps = {
+  selectedSportKey: number;
+};
+
+const EventList: React.FC<EventListProps> = ({ selectedSportKey }) => {
+  return (
+    <EventsWrapper>
+      {sportData.sports[selectedSportKey].schedules.map((data, key) => {
+        return (
+          <EventDay key={key}>
+            <DateContainer>
+              <DayOfWeek>
+                {dayjs(data.units[0].startDateTimeUtc).format("dddd")}
+              </DayOfWeek>
+              <DateDigit>
+                {dayjs(data.units[0].startDateTimeUtc).format("D")}
+              </DateDigit>
+              <Month>
+                {dayjs(data.units[0].startDateTimeUtc).format("MMMM")}
+              </Month>
+            </DateContainer>
+            <EventContainer display="flex" border="1px solid hotpink">
+              {data.units.map((unit, key2) => {
+                return (
+                  <Events key={unit.unitCode}>
+                    <Time>
+                      {dayjs(unit.startDateTimeUtc).format("HH:mm")}
+                      &nbsp;UTC
+                    </Time>
+                    <Event>{unit.description}</Event>
+                  </Events>
+                );
+              })}
+            </EventContainer>
+          </EventDay>
+        );
+      })}
+    </EventsWrapper>
   );
 };
 
