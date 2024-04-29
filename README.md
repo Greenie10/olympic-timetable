@@ -17,65 +17,65 @@ Clone the repository and navigate to the project directory.
 
 - [x] Initial setup of repo
 - [x] Import and map the data for one sport
-- [ ] Navigation between sports
+- [x] Navigation between sports
 - [ ] Break index into components
-- [ ] Import and map the data for all sports
-- [ ] Get the data for all sports
+- [x] Import and map the data for all sports
+- [x] Get the data for all sports
 - [ ] Filter by sport, event level (eg, only finals), date, day, time, etc
 - [ ] Styling - maybe dark/light modes, ensure mobile responsiveness
 - [ ] Enable user time zone selection
 
 ### Sports
 
-- [ ] Archery 🚧
-- [ ] Artistic Gymnastics 
-- [ ] Artistic Swimming 
-- [ ] Athletics 
-- [ ] Badminton 
-- [ ] Baseball Softball 
-- [ ] Basketball 
-- [ ] Basketball 3x3 
-- [ ] Beach Volleyball 
-- [ ] Boxing 
-- [ ] Breaking 
-- [ ] Canoe Slalom 
-- [ ] Canoe Sprint 
-- [ ] Cricket 
-- [ ] Cycling BMX Freestyle 
-- [ ] Cycling BMX Racing 
-- [ ] Cycling Mountain Bike 
-- [ ] Cycling Road 
-- [ ] Cycling Track 
-- [ ] Diving 
-- [ ] Equestrian 
-- [ ] Fencing 
-- [ ] Flag Football 
-- [ ] Football 
-- [ ] Golf 
-- [ ] Handball 
-- [ ] Hockey 
-- [ ] Judo 
-- [ ] Karate 
-- [ ] Lacrosse 
-- [ ] Marathon Swimming 
-- [ ] Modern Pentathlon 
-- [ ] Rhythmic Gymnastics 
-- [ ] Rowing 
-- [ ] Rugby Sevens 
-- [ ] Sailing 
-- [ ] Shooting 
-- [ ] Skateboarding 
-- [ ] Sport Climbing 
-- [ ] Squash 
-- [ ] Surfing 
-- [ ] Swimming 
-- [ ] Table Tennis 
-- [ ] Taekwondo 
-- [ ] Tennis 
-- [ ] Trampoline 
-- [ ] Triathlon 
-- [ ] Volleyball 
-- [ ] Water Polo 
-- [ ] Weightlifting 
-- [ ] Wrestling 
+- [x] Archery 🚧
+- [x] Artistic Gymnastics 
+- [x] Artistic Swimming 
+- [x] Athletics 
+- [x] Badminton 
+- [x] Baseball Softball 
+- [x] Basketball 
+- [x] Basketball 3x3 
+- [x] Beach Volleyball 
+- [x] Boxing 
+- [x] Breaking 
+- [x] Canoe Slalom 
+- [x] Canoe Sprint 
+- [x] Cricket 
+- [x] Cycling BMX Freestyle 
+- [x] Cycling BMX Racing 
+- [x] Cycling Mountain Bike 
+- [x] Cycling Road 
+- [x] Cycling Track 
+- [x] Diving 
+- [x] Equestrian 
+- [x] Fencing 
+- [x] Flag Football 
+- [x] Football 
+- [x] Golf 
+- [x] Handball 
+- [x] Hockey 
+- [x] Judo 
+- [x] Karate 
+- [x] Lacrosse 
+- [x] Marathon Swimming 
+- [x] Modern Pentathlon 
+- [x] Rhythmic Gymnastics 
+- [x] Rowing 
+- [x] Rugby Sevens 
+- [x] Sailing 
+- [x] Shooting 
+- [x] Skateboarding 
+- [x] Sport Climbing 
+- [x] Squash 
+- [x] Surfing 
+- [x] Swimming 
+- [x] Table Tennis 
+- [x] Taekwondo 
+- [x] Tennis 
+- [x] Trampoline 
+- [x] Triathlon 
+- [x] Volleyball 
+- [x] Water Polo 
+- [x] Weightlifting 
+- [x] Wrestling 
 
